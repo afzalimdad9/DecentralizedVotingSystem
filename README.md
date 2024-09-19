@@ -10,6 +10,7 @@ This project consists of two Solidity smart contracts:
 2. **VoteCasting**: This contract extends `VotingApp` and adds the functionality to cast votes and view the vote count.
 
 The voting system follows these rules:
+
 - Only the owner of the contract can register candidates.
 - Voting is open for a limited time after deployment (default is 60 seconds).
 - Each address can vote only once.
@@ -23,12 +24,12 @@ The voting system follows these rules:
 
 - ![voting](https://github.com/user-attachments/assets/476856c6-e118-4c60-9aea-0db9f0c71756)
 
-
 ## Smart Contract Details
 
 ### VotingApp Contract
 
 - **State Variables:**
+
   - `owner`: Address of the contract owner who can register candidates and close voting.
   - `totalCandidates`: Total number of registered candidates.
   - `isVotingOpen`: Boolean indicating if the voting is currently open.
@@ -37,12 +38,15 @@ The voting system follows these rules:
   - `candidates`: A mapping to store candidate details with a unique ID.
 
 - **Structs:**
+
   - `Candidate`: Represents a candidate with `candidateName`, `candidateVotes`, and `isValue` (indicating if the candidate is registered).
 
 - **Events:**
+
   - `voteCast(address voterAddress, string message)`: Logs when a vote is cast.
 
 - **Modifiers:**
+
   - `onlyOwner`: Restricts functions to be called only by the contract owner.
   - `votingOpen`: Ensures voting is open.
   - `votingOpenTime`: Ensures that voting is within the allowed time frame.
@@ -65,17 +69,17 @@ The voting system follows these rules:
 
 1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/hassanrauf1/DecentralizedVotingSystem.git
-    cd DecentralizedVotingSystem
-    ```
+   ```bash
+   git clone https://github.com/afzalimdad9/DecentralizedVotingSystem.git
+   cd DecentralizedVotingSystem
+   ```
 
 2. **Install dependencies**:
    Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. **Compile and deploy the contracts**:
    You can use [Remix IDE](https://remix.ethereum.org/) or Truffle to compile and deploy the contracts to an Ethereum test network like Ropsten or Rinkeby.
@@ -106,7 +110,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## Contact
 
-For any questions or support, please contact Eng.hassanrauf@gmail.com
+For any questions or support, please contact Eng.afzalimdad9@gmail.com
 
 ---
 
